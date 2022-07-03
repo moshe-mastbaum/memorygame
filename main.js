@@ -24,19 +24,13 @@ class Card{
 
 
 function opencard(i){
-    if (cards[i].canopen){
-        console.log("iiiii")
-        console.log((i))        
-        idcrd = `#crd${i}`
-        document.querySelector(`#crd${i}`).innerHTML = `<img src="imgs/img${imgs[i]}.jpg">` 
-        // document.querySelector(`#crd${i}`).innerHTML = `3`       
-        cards[i].canopen=false;
+    if (cards[i].canopen){          
+        idcrd = `#crd${i}`              
+        document.querySelector(idcrd).innerHTML = `<img src="imgs/img${imgs[i]}.jpg">`
+        console.log("iii",i)            
+        
         open++;
-        console.log("open")
-        console.log(open)
-        if (guess1==-1){
-            guess1=i; 
-        } 
+        
         if (open%2==0){ 
             document.querySelector('#try').innerHTML = `נסיון מספר ${open/2} ` 
             if (imgs[i]==imgs[guess1]){                
@@ -46,12 +40,15 @@ function opencard(i){
                     guess1=-1; 
             }   
             else{
-                    setTimeout(()=>casefalse(i),30)
-                    cards[i].canopen=true;
-                    cards[guess1].canopen=true;
-            }                                     
-                    
-        }       
+                   cards[i].canopen=true;
+                   cards[guess1].canopen=true;
+                   setTimeout(()=>casefalse(i),120)                    
+            }         
+        }  
+        else{
+            guess1=i;
+            cards[i].canopen=false; 
+        }     
     }   
 }      
 
@@ -59,8 +56,8 @@ function casefalse(i){
     alert ("אויויוויי")    
     document.querySelector(`#crd${i}`).innerHTML = ''
     document.querySelector(`#crd${guess1}`).innerHTML = ''
-    guess1=-1;
-    console.log(guess1)
+    // guess1=-1;
+   
 }
 
 function alertthis(x){
