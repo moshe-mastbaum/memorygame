@@ -27,7 +27,7 @@ function opencard(i){
     if (cards[i].canopen){          
         idcrd = `#crd${i}`              
         document.querySelector(idcrd).innerHTML = `<img src="imgs/img${imgs[i]}.jpg">`
-        console.log("iii",i)            
+        console.log("jjj",i)            
         
         open++;
         
