@@ -1,0 +1,36 @@
+
+.head1{
+    /* border: saddlebrown solid 1px; */
+    margin: auto;
+    width: 1164px;
+    height: 40px; ;
+    text-align: center;
+}
+.head2{   
+    font-size:  35px;
+    width: 33%;
+    float: left;
+}
+ 
+
+.board{
+    background-color: rgba(0, 0, 255, 0.247);
+    margin: auto;
+    max-width: 1164px;
+    height: 582px;
+    border: 1px solid;
+}
+
+.card{
+    background-color:    aquamarine;
+    border-radius: 4px;
+    margin: 1px;
+    padding: 5px;px;
+    width: 180px;
+    height: 180px;
+    border: solid 1px;
+    float: left;
+}
+body{
+    background-color: aquamarine;
+}
